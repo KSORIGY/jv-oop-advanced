@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
 
-        AbstractFigure[] figures = new AbstractFigure[6];
+        Figure[] figures = new Figure[6];
 
         for (int i = 0; i < 3; i++) {
             figures[i] = figureSupplier.getFigure();
@@ -14,7 +14,7 @@ public class Main {
             figures[i] = figureSupplier.getDefaultFigure();
         }
 
-        for (AbstractFigure figure : figures) {
+        for (Figure figure : figures) {
             figure.draw();
         }
 

@@ -10,7 +10,7 @@ public class FigureSupplier {
         return 1 + rand.nextDouble() * 24;
     }
 
-    public AbstractFigure getFigure() {
+    public Figure getFigure() {
         int figureType = rand.nextInt(5);
         Color color = colorSupplier.getColor();
 
@@ -30,7 +30,7 @@ public class FigureSupplier {
         }
     }
 
-    public AbstractFigure getDefaultFigure() {
+    public Figure getDefaultFigure() {
         return new Circle(Color.WHITE, 10);
     }
 }
