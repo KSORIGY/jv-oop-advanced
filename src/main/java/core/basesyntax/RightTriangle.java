@@ -1,6 +1,6 @@
 package core.basesyntax;
 
-public class RightTriangle extends Figure {
+public class RightTriangle extends AbstractFigure {
     private double firstLeg;
     private double secondLeg;
 
@@ -16,7 +16,7 @@ public class RightTriangle extends Figure {
     }
 
     @Override
-    void draw() {
+    public void draw() {
         System.out.printf("Figure: right triangle, area: %.2f sq. units,"
                         + " firstLeg: %.2f units, secondLeg: %.2f units, color: %s%n",
                 getArea(), firstLeg, secondLeg, getColor());

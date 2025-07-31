@@ -1,9 +1,9 @@
 package core.basesyntax;
 
-public abstract class Figure {
+public abstract class AbstractFigure implements Figure {
     private Color color;
 
-    public Figure(Color color) {
+    public AbstractFigure(Color color) {
         this.color = color;
     }
 
@@ -14,9 +14,5 @@ public abstract class Figure {
     public Color getColor() {
         return color;
     }
-
-    public abstract double getArea();
-
-    abstract void draw();
 
 }
