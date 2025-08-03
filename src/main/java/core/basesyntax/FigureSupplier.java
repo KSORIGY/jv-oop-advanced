@@ -6,12 +6,11 @@ public class FigureSupplier {
     private static final ColorSupplier colorSupplier = new ColorSupplier();
     private static final Random rand = new Random();
 
-    private double randSize() {
-        return 1 + rand.nextDouble() * 24;
-    }
+    private static final int FIGURE_TYPES_COUNT = 5;
+    private static final int FIGURE_DEFALT_RADIUS = 10;
 
-    public AbstractFigure getFigure() {
-        int figureType = rand.nextInt(5);
+    public Figure getFigure() {
+        int figureType = rand.nextInt(FIGURE_TYPES_COUNT);
         Color color = colorSupplier.getColor();
 
         switch (figureType) {
@@ -30,7 +29,11 @@ public class FigureSupplier {
         }
     }
 
-    public AbstractFigure getDefaultFigure() {
-        return new Circle(Color.WHITE, 10);
+    public Figure getDefaultFigure() {
+        return new Circle(Color.WHITE, FIGURE_DEFALT_RADIUS);
+    }
+
+    private double randSize() {
+        return 1 + rand.nextDouble() * 24;
     }
 }

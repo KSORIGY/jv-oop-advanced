@@ -1,10 +1,12 @@
 package core.basesyntax;
 
 public class Main {
+    private static final int ARRAY_OF_FIGURES_SIZE = 6;
+
     public static void main(String[] args) {
         FigureSupplier figureSupplier = new FigureSupplier();
 
-        AbstractFigure[] figures = new AbstractFigure[6];
+        Figure[] figures = new Figure[ARRAY_OF_FIGURES_SIZE];
 
         for (int i = 0; i < 3; i++) {
             figures[i] = figureSupplier.getFigure();
@@ -14,9 +16,8 @@ public class Main {
             figures[i] = figureSupplier.getDefaultFigure();
         }
 
-        for (AbstractFigure figure : figures) {
+        for (Figure figure : figures) {
             figure.draw();
         }
-
     }
 }
