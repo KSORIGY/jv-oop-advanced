@@ -8,10 +8,12 @@ public class Main {
 
         Figure[] figures = new Figure[ARRAY_OF_FIGURES_SIZE];
 
+        //Fill the first half of array with random figures
         for (int i = 0; i < 3; i++) {
             figures[i] = figureSupplier.getFigure();
         }
 
+        //Fill the second half of array with default figures
         for (int i = 3; i < 6; i++) {
             figures[i] = figureSupplier.getDefaultFigure();
         }

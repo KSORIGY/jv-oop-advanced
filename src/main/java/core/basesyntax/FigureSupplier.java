@@ -8,6 +8,7 @@ public class FigureSupplier {
 
     private static final int FIGURE_TYPES_COUNT = 5;
     private static final int FIGURE_DEFALT_RADIUS = 10;
+    private static final double MAX_SIZE = 24;
 
     public Figure getFigure() {
         int figureType = rand.nextInt(FIGURE_TYPES_COUNT);
@@ -34,6 +35,6 @@ public class FigureSupplier {
     }
 
     private double randSize() {
-        return 1 + rand.nextDouble() * 24;
+        return 1 + rand.nextDouble() * MAX_SIZE;
     }
 }
