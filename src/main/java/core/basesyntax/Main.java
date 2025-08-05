@@ -8,14 +8,14 @@ public class Main {
 
         Figure[] figures = new Figure[ARRAY_OF_FIGURES_SIZE];
 
-        //Fill the first half of array with random figures
-        for (int i = 0; i < 3; i++) {
-            figures[i] = figureSupplier.getFigure();
-        }
+        int halfSizeArray = ARRAY_OF_FIGURES_SIZE / 2;
 
-        //Fill the second half of array with default figures
-        for (int i = 3; i < 6; i++) {
-            figures[i] = figureSupplier.getDefaultFigure();
+        for (int i = 0; i < ARRAY_OF_FIGURES_SIZE; i++) {
+            if (i < halfSizeArray) {
+                figures[i] = figureSupplier.getFigure();
+            } else {
+                figures[i] = figureSupplier.getDefaultFigure();
+            }
         }
 
         for (Figure figure : figures) {
